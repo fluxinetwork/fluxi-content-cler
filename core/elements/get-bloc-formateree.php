@@ -199,7 +199,7 @@
 				</div>
 				</section>';
 
-				$fluxi_content_formateree .= '<div class="formateree-mosaic fullW"><img src="'.get_bloginfo('template_url').'/app/img/photos-formateree.jpg" class="formateree-mosaic__img"></div>';
+				$fluxi_content_formateree .= '<div class="formateree-mosaic fullW"><img src="'.home_url().'/app/img/photos-formateree.jpg" class="formateree-mosaic__img"></div>';
 
 			else:
 			
