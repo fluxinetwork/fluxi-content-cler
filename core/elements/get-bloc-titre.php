@@ -12,17 +12,17 @@
 	 */
 
 	function get_bloc_titre(){
-			
+
 		$texte_titre = get_sub_field('texte_titre');
 
 		if( $texte_titre ):
-			
-			$fluxi_content_titre = '<h2 class="fc__title">'.$texte_titre.'</h2>';
+
+			$fluxi_content_titre = '<h3 class="fc__title">'.$texte_titre.'</h3>';
 
 			return $fluxi_content_titre;
-		
+
 		endif;
-		
+
 	}
 
 ?>
