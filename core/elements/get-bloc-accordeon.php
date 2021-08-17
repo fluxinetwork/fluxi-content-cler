@@ -20,7 +20,7 @@
 			$fluxi_content_accordeon = '<div class="fc__accordeon fc__item js-accordeon">';
 
 			$fluxi_content_accordeon .= '<h2 class="fc__accordeon__title">';
-			$fluxi_content_accordeon .= '<i class="fa fa-chevron-right fc__accordeon__icon" aria-hidden="true"></i>';
+			$fluxi_content_accordeon .= '<span class="fc__accordeon__icon"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>';
 			$fluxi_content_accordeon .= '<span>'.get_sub_field('titre_accordeon').'</span>';
 			$fluxi_content_accordeon .= '</h2>';
 

@@ -90,8 +90,8 @@ if( ! class_exists('fluxicontent') ) :
 		function init() {
 			
 			// Remove post type support			 
-			remove_post_type_support( 'post', 'editor' );
-			remove_post_type_support( 'page', 'editor' );
+			//remove_post_type_support( 'post', 'editor' );
+			//remove_post_type_support( 'page', 'editor' );
 
 			// Remove auto formating
 			remove_filter( 'the_content', 'wpautop' );
