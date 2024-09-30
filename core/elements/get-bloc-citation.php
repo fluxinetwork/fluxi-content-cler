@@ -39,7 +39,6 @@ function get_bloc_citation()
         endif;
         $output .= '</figure>';
 
-
         return $output;
 
     endif;
