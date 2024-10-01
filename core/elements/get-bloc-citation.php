@@ -18,16 +18,24 @@ function get_bloc_citation()
     $output = '';
 
     if ($fluxi_content_citation):
+        $author = false;
+        $modifier_photo = 'centre';
+        if (get_sub_field('ajouter_auteur')) :
+            $author = get_sub_field('auteur');
+            $fluxi_content_citation = '"' . $fluxi_content_citation . '"';
+            if ($author['photo']) :
+                $modifier_photo = $author['position_photo'];
+            endif;
+        endif;
 
         $output .= '<figure class="fc__blockquote">';
         $output .= '<span class="fc__blockquote__deco fc__blockquote__deco--top"></span>';
         $output .= '<blockquote class="fc__blockquote__text">' . $fluxi_content_citation . '</blockquote>';
         $output .= '<span class="fc__blockquote__deco fc__blockquote__deco--bottom"></span>';
-        if (get_sub_field('ajouter_auteur')) :
-            $author = get_sub_field('auteur');
+        if ($author) :
             $output .= '<div class="fc__blockquote__author">';
             if ($author['photo']) :
-                $output .= '<div class="fc__blockquote__photo">' . fx_get_lazy_img($author['photo']) . '</div>';
+                $output .= '<div class="fc__blockquote__photo -' . $modifier_photo . '">' . fx_get_lazy_img($author['photo']) . '</div>';
             endif;
             $output .= '<div class="fc__blockquote__name">';
             $output .= '<span class="name">' . $author['nom'] . '</span>';
