@@ -33,17 +33,17 @@ function get_bloc_citation()
         $output .= '<blockquote class="fc__blockquote__text">' . $fluxi_content_citation . '</blockquote>';
         $output .= '<span class="fc__blockquote__deco fc__blockquote__deco--bottom"></span>';
         if ($author) :
-            $output .= '<div class="fc__blockquote__author">';
+            $output .= '<figcaption class="fc__blockquote__author">';
             if ($author['photo']) :
                 $output .= '<div class="fc__blockquote__photo -' . $modifier_photo . '">' . fx_get_lazy_img($author['photo']) . '</div>';
             endif;
-            $output .= '<div class="fc__blockquote__name">';
+            $output .= '<p class="fc__blockquote__name">';
             $output .= '<span class="name">' . $author['nom'] . '</span>';
             if ($author['fonction']) :
                 $output .= '<span class="role">' . $author['fonction'] . '</span>';
             endif;
-            $output .= '</div>';
-            $output .= '</div>';
+            $output .= '</p>';
+            $output .= '</figcaption>';
         endif;
         $output .= '</figure>';
 
