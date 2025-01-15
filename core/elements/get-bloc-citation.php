@@ -11,8 +11,7 @@
  *  @return HTML - ACF citation fields
  */
 
-function get_bloc_citation()
-{
+function get_bloc_citation() {
 
     $fluxi_content_citation = get_sub_field('citation');
     $output = '';
@@ -22,7 +21,7 @@ function get_bloc_citation()
         $modifier_photo = 'centre';
         if (get_sub_field('ajouter_auteur')) :
             $author = get_sub_field('auteur');
-            $fluxi_content_citation = '"' . $fluxi_content_citation . '"';
+            $fluxi_content_citation = '«' . $fluxi_content_citation . '»';
             if ($author['photo']) :
                 $modifier_photo = $author['position_photo'];
             endif;

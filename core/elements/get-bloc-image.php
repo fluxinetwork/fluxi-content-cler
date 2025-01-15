@@ -15,12 +15,11 @@ function get_bloc_image()
 {
 
     $image_only = get_sub_field('image');
+    $no_margin_top = (get_sub_field('supprimer_marge_superieure')) ? 'mt-none' : '';
     $image_caption = $image_only['caption'];
     $fluxi_content_image = '';
 
-    $fluxi_content_image .= '<a href="' . $image_only['sizes']['large'] . '" class="js-is-lightbox">';
-    $fluxi_content_image .= fx_get_lazy_img($image_only, true, false, true, 'c-figure');
-    $fluxi_content_image .= '</a>';
+    $fluxi_content_image .= fx_get_lazy_img($image_only, true, false, true, 'c-figure ' . $no_margin_top);
 
     return $fluxi_content_image;
 }
